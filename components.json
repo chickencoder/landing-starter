@@ -19,6 +19,7 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@landing": "https://registry-inky-xi.vercel.app/r/{name}.json"
+    "@landing": "https://registry-inky-xi.vercel.app/r/{name}.json",
+    "@react-bits": "https://reactbits.dev/r/{name}.json"
   }
 }

@@ -2,10 +2,10 @@
   "mcpServers": {
     "shadcn": {
       "command": "npx",
-      "args": ["shadcn@latest", "mcp"],
-      "env": {
-        "ALLOWED_PATHS": "/home/landing/project"
-      }
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ]
     }
   }
 }
