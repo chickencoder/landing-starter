@@ -1,11 +1,20 @@
 ---
 name: page-builder
-description: For creating or updating landing pages and multi-page websites in Next.js 16 with React 19, Tailwind CSS v4, and shadcn/ui components from @landing and @react-bits registries. Use when building pages, implementing layouts, or designing conversion-focused interfaces.
+description: For creating page or updating existing code
 ---
 
 # Page Builder
 
 Build high-end, visually stunning, conversion-focused landing pages using modern web technologies.
+
+## Quick Workflow Checklist
+
+- [ ] Discover components with `mcp__shadcn__search_items_in_registries`
+- [ ] Add components with the CLI command
+- [ ] **READ each component file to see actual exports** ⚠️
+- [ ] Add navbar first (search for "nav" in `@landing`)
+- [ ] Build page sections
+- [ ] Never assume component names - always verify
 
 ## Tech Stack
 
@@ -68,15 +77,26 @@ mcp__shadcn__get_add_command_for_items
 
 Then run the returned command (typically `npx shadcn add ...`).
 
-**After adding components**: Read the generated files to understand:
+**⚠️ CRITICAL - Before writing ANY code:**
 
-- Available exports
-- Component structure
-- Props and customization options
+```bash
+# Read each component file you added
+Read tool: components/hero-01.tsx
+Read tool: components/pricing-01.tsx
+# etc.
+```
+
+Document the actual exports. Don't assume naming - components may use `CallOut01` (capital O), `CardName` (not CardTitle), or expect external UI components like `Avatar`.
 
 ### 4. Implement Layout (Navbar & Footer)
 
-**Unless instructed otherwise**, start by implementing navigation and footer in `app/layout.tsx`:
+**⚠️ ALWAYS add navbar first** (unless told otherwise). Every landing page needs navigation.
+
+1. Search: `mcp__shadcn__search_items_in_registries` with "nav" or "header"
+2. Add component → **Read the file** → Implement in `app/layout.tsx`
+3. Then build page content
+
+**Unless instructed otherwise**, implement navigation and footer in `app/layout.tsx`:
 
 - Use components from `@landing` registry
 - Match the overall design style
